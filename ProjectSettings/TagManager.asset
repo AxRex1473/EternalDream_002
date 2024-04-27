@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Floor
+  - ColdNeuron
   layers:
   - Default
   - TransparentFX
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: Puertas
     uniqueID: 3814013949
+    locked: 0
+  - name: Neuronas
+    uniqueID: 590456555
     locked: 0

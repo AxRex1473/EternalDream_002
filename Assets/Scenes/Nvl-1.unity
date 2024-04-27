@@ -385,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57063211}
   - component: {fileID: 57063212}
+  - component: {fileID: 57063213}
   m_Layer: 0
   m_Name: Hot neuron (1)
   m_TagString: Untagged
@@ -401,7 +402,7 @@ Transform:
   m_GameObject: {fileID: 57063210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6751795, y: 33.22154, z: -135.68587}
+  m_LocalPosition: {x: 1.82, y: 33.22154, z: -135.68587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -445,8 +446,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 807578619
-  m_SortingLayer: 2
+  m_SortingLayerID: 590456555
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 611c11985f2c5ae488a628c6409116d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -459,6 +460,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &57063213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57063210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd3c0a450d005b4386d20db2432abec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &62691925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,6 +6450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1013547686}
   - component: {fileID: 1013547687}
+  - component: {fileID: 1013547688}
   m_Layer: 0
   m_Name: Cold neuron (1)
   m_TagString: Untagged
@@ -6453,7 +6467,7 @@ Transform:
   m_GameObject: {fileID: 1013547685}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1151795, y: 37.201538, z: -134.98587}
+  m_LocalPosition: {x: -2.62, y: 37.201538, z: -134.98587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6497,8 +6511,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 807578619
-  m_SortingLayer: 2
+  m_SortingLayerID: 590456555
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 127db43b8eeee534db84af966184e47b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6511,6 +6525,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1013547688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013547685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd3c0a450d005b4386d20db2432abec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025492105
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,9 +6754,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1059649711}
   - component: {fileID: 1059649712}
+  - component: {fileID: 1059649713}
   m_Layer: 0
   m_Name: Cold neuron
-  m_TagString: Untagged
+  m_TagString: ColdNeuron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6744,7 +6771,7 @@ Transform:
   m_GameObject: {fileID: 1059649710}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.1751795, y: 37.201538, z: -134.98587}
+  m_LocalPosition: {x: -6.91, y: 37.201538, z: -134.98587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6788,8 +6815,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 807578619
-  m_SortingLayer: 2
+  m_SortingLayerID: 590456555
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 127db43b8eeee534db84af966184e47b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6802,6 +6829,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1059649713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059649710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd3c0a450d005b4386d20db2432abec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1077483392
 GameObject:
   m_ObjectHideFlags: 0
@@ -12265,6 +12304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885896800}
   - component: {fileID: 1885896801}
+  - component: {fileID: 1885896802}
   m_Layer: 0
   m_Name: Hot neuron
   m_TagString: Untagged
@@ -12325,8 +12365,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 807578619
-  m_SortingLayer: 2
+  m_SortingLayerID: 590456555
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 611c11985f2c5ae488a628c6409116d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12339,6 +12379,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1885896802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885896799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd3c0a450d005b4386d20db2432abec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1896141882
 GameObject:
   m_ObjectHideFlags: 0
