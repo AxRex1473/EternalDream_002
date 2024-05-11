@@ -49,12 +49,18 @@ TagManager:
   - name: Assets
     uniqueID: 807578619
     locked: 0
+  - name: Neuronas
+    uniqueID: 590456555
+    locked: 0
+  - name: Baterias
+    uniqueID: 1266557965
+    locked: 0
   - name: Player
     uniqueID: 14023175
     locked: 0
+  - name: Cursor
+    uniqueID: 3130124591
+    locked: 0
   - name: Puertas
     uniqueID: 3814013949
-    locked: 0
-  - name: Neuronas
-    uniqueID: 590456555
     locked: 0
