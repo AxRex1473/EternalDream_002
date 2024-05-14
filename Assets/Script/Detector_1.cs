@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Detector_1 : MonoBehaviour
 {
-    public GameObject panelOut; // Referencia al panel que quieres activar
+    public GameObject victoryPanel; // El panel de victoria que se activará
+    private GameController gameController;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
     {
-        // Comprueba si el collider que ha entrado en contacto tiene el tag "Player_1"
-        if (collision.CompareTag("Player_1"))
+        gameController = GameController.instance;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player_1"))
         {
-            // Activa el panel
-            panelOut.SetActive(true);
+            if (gameController.GetPoints() >= gameController.GetTotalPoints())
+            {
+                victoryPanel.SetActive(true); // Activa el panel de victoria
+            }
+            else
+            {
+                Debug.Log("La puerta está bloqueada. Necesitas recolectar todos los puntos.");
+            }
         }
     }
 }
