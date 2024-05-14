@@ -23,7 +23,7 @@ public class Detector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && isActive == true)
+        if (collision.CompareTag("Player_1") && isActive == true)
         {
             isActive = false;
             Room.SetActive(true);

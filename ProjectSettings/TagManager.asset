@@ -9,6 +9,7 @@ TagManager:
   - Neurona
   - Bateria
   - Liquido
+  - Player_1
   layers:
   - Default
   - TransparentFX

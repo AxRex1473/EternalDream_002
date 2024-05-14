@@ -5,7 +5,7 @@ using TMPro;
 public class CountdownTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
-    private float timeRemaining = 300f; // 5 minutes in seconds
+    private float timeRemaining = 180f; // 5 minutes in seconds
 
     void Update()
     {
