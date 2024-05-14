@@ -8,7 +8,7 @@ public class StarterActive : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StarterDesactivate(2f));
+        StartCoroutine(StarterDesactivate(3f));
     }
 
     // Update is called once per frame
