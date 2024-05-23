@@ -38,7 +38,6 @@ public class Line : MonoBehaviour
         GameObject newGameObject = Instantiate(Resources.Load("Line") as GameObject, new Vector3(0, 0, 0), Quaternion.identity);
         LineRenderer line = newGameObject.GetComponent<LineRenderer>();
         line.positionCount = 0;
-
         while (true)
         {
             Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);

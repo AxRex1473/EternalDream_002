@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 21236908}
   - component: {fileID: 21236910}
   m_Layer: 0
-  m_Name: Hot neuron
+  m_Name: Neuron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 611c11985f2c5ae488a628c6409116d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -379,6 +379,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 30314233187467669, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 158410505570065469, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 803258260755309550, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 807874405}
+    - target: {fileID: 803258260755309550, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleMessagePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1141514631904157583, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_text
+      value: 'Bienvenido a Eternal Dream
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_fontSize
+      value: 63.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 63.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678248634577067497, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7665774949361562104, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7829641678653433438, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
@@ -460,6 +498,10 @@ PrefabInstance:
     - target: {fileID: 7829641678653433438, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9211628023518884846, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -708,8 +750,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 488086943}
-  - component: {fileID: 488086946}
   - component: {fileID: 488086945}
+  - component: {fileID: 488086946}
   m_Layer: 6
   m_Name: TouchDraw
   m_TagString: Untagged
@@ -771,9 +813,9 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 515323323
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -941,15 +983,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8944897731712848628, guid: 534fa914f4f26644b96f1470d7f35203, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 534fa914f4f26644b96f1470d7f35203, type: 3}
+--- !u!114 &807874405 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1943832137213942649, guid: c4dcef5092f94c34fba5e762226427d1, type: 3}
+  m_PrefabInstance: {fileID: 1753153629}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02c0a217d3a056418b2cc9645df28d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &941126882
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1078,7 @@ GameObject:
   - component: {fileID: 975378049}
   - component: {fileID: 975378050}
   m_Layer: 0
-  m_Name: door_open
+  m_Name: DoorOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1090,7 +1139,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 1e86d7529122fcc48a14ccceffec2ca6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -1113,7 +1162,6 @@ GameObject:
   - component: {fileID: 1014400450}
   - component: {fileID: 1014400449}
   - component: {fileID: 1014400448}
-  - component: {fileID: 1014400451}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1195,22 +1243,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1014400451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014400447}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7801eca9914f142beb9aa6782519cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  lineController: {fileID: 0}
 --- !u!1 &1049949005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1193311183481345021, guid: 992a0dfd23293f34691303e75544a633, type: 3}
@@ -1313,6 +1345,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6799280457787687570, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6799280457787687570, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068392313104013228, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7068392313104013228, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627464617500768358, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810371943357562931, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810371943357562931, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148704638689972613, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148704638689972613, guid: e073aae979b9a98478628ec4f69a1553, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1395,7 +1463,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a9a99e15eb117a44aa2caa127da6e620, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1480,7 +1548,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -2649,7 +2717,7 @@ GameObject:
   - component: {fileID: 1418419049}
   - component: {fileID: 1418419048}
   m_Layer: 0
-  m_Name: batery_on_0
+  m_Name: Battery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2774,7 +2842,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 259150448, guid: eb24331129879ad44aecd54c0063847b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2814,7 +2882,7 @@ GameObject:
   - component: {fileID: 1553193555}
   - component: {fileID: 1553193554}
   m_Layer: 0
-  m_Name: door_close
+  m_Name: DoorClose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2875,7 +2943,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 02770de358d7c5c4fb202b18b1cb80cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3238,7 +3306,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 504405554, guid: 5484c6db10555c648acdb4c22a91ab33, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
