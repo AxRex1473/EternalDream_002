@@ -33,11 +33,11 @@ public class PlayerController : MonoBehaviour
         // Flip del personaje en función de la dirección horizontal
         if (moveHorizontal < 0)
         {
-            spriteRenderer.flipX = true; // Girar el sprite hacia la izquierda
+            spriteRenderer.flipX = false; // Girar el sprite hacia la izquierda
         }
         else if (moveHorizontal > 0)
         {
-            spriteRenderer.flipX = false; // Girar el sprite hacia la derecha
+            spriteRenderer.flipX = true; // Girar el sprite hacia la derecha
         }
 
         if (moveHorizontal != 0 || moveVertical != 0)
