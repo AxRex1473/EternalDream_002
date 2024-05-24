@@ -6,7 +6,7 @@ public class CountdownTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public GameObject gameOverPanel; // Referencia al panel de juego terminado
-    private float timeRemaining = 180f; // 5 minutes in seconds
+    private float timeRemaining = 120f; // 5 minutes in seconds
     private bool isTimerRunning = true; // Variable para verificar si el temporizador está en funcionamiento
 
     void Update()

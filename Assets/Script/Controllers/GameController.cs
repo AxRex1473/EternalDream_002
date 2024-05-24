@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
     private int points = 0;
-    private int totalPoints = 3; // Total de objetos a recolectar
+    private int totalPoints = 1; // Total de objetos a recolectar
 
     public GameObject door; // La puerta que se desbloquea
     public Sprite unlockedDoorSprite; // El nuevo sprite para la puerta desbloqueada
@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour
     {
         if (pointsText != null)
         {
-            pointsText.text = "Puntos: " + points + "/" + totalPoints;
+            pointsText.text = "Baterias: " + points + "/" + totalPoints;
         }
     }
 

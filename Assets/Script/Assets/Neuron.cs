@@ -6,8 +6,11 @@ public class Neuron : MonoBehaviour
 {
     public Sprite neuronaFria;
     private SpriteRenderer spriteRenderer;
-    private bool isCollected = false;
     private bool playerInRange = false;
+
+    public PlayerController player;
+
+    public Transform SpawnPoint;
 
     private void Start()
     {
@@ -17,20 +20,25 @@ public class Neuron : MonoBehaviour
     private void Update()
     {
         // Verificar si el jugador está en rango y hace clic con el mouse
-        if (playerInRange && Input.GetMouseButtonDown(0) && !isCollected)
+        if (playerInRange && player.spriteRenderer.color == Color.blue)
         {
             spriteRenderer.sprite = neuronaFria;
-            isCollected = true; // Marcar como recogido
-            GameController.instance.AddPoint(); // Agregar un punto
         }
+       
+            
+        
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         // Verificar si el jugador entró en el collider
         if (other.CompareTag("Player_1"))
         {
             playerInRange = true;
+            if (playerInRange && player.spriteRenderer.color != Color.blue)
+            {
+                player.transform.position = SpawnPoint.position;
+            }
         }
     }
 

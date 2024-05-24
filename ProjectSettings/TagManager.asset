@@ -10,6 +10,7 @@ TagManager:
   - Bateria
   - Liquido
   - Player_1
+  - Fall
   layers:
   - Default
   - TransparentFX

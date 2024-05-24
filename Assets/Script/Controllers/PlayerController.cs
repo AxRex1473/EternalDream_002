@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 3f; // Velocidad de movimiento del personaje
-    public float jumpForce = 10f; // Fuerza de salto del personaje
-    private SpriteRenderer spriteRenderer; // Referencia al componente SpriteRenderer
-    private Animator animator;
+    public SpriteRenderer spriteRenderer; // Referencia al componente SpriteRenderer
+    public Animator animator;
     private Rigidbody2D rb;
     private bool isGrounded;
-
+    public Transform transformPlayer;
+    public Transform SpawnPointPlayer;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>(); // Obtener el componente SpriteRenderer del personaje
@@ -48,9 +48,13 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Verificar si el jugador entró en el collider
+        if (other.CompareTag("Fall"))
         {
-            rb.velocity = new Vector2(rb.velocity.y, jumpForce);
+            transformPlayer.position = SpawnPointPlayer.transform.position;
         }
     }
 }
