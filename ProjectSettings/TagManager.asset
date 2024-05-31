@@ -6,11 +6,11 @@ TagManager:
   tags:
   - Floor
   - Puerta
-  - Neurona
   - Bateria
   - Liquido
   - Player_1
   - Fall
+  - Neuron
   layers:
   - Default
   - TransparentFX

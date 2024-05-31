@@ -9,7 +9,6 @@ public class Neuron : MonoBehaviour
     private bool playerInRange = false;
 
     public PlayerController player;
-
     public Transform SpawnPoint;
 
     private void Start()
@@ -22,6 +21,7 @@ public class Neuron : MonoBehaviour
         // Verificar si el jugador está en rango y hace clic con el mouse
         if (playerInRange && player.spriteRenderer.color == Color.blue)
         {
+           
             spriteRenderer.sprite = neuronaFria;
         }
        

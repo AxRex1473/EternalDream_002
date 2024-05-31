@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 21236910}
   m_Layer: 0
   m_Name: Neuron
-  m_TagString: Untagged
+  m_TagString: Neuron
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,6 +369,7 @@ MonoBehaviour:
   animator: {fileID: 26876152}
   transformPlayer: {fileID: 26876154}
   SpawnPointPlayer: {fileID: 814767938}
+  panelLose: {fileID: 559670295}
 --- !u!95 &26876152
 Animator:
   serializedVersion: 5

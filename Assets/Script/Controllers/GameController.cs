@@ -71,7 +71,7 @@ public class GameController : MonoBehaviour
         SpriteRenderer doorSpriteRenderer = door.GetComponent<SpriteRenderer>();
         if (doorSpriteRenderer != null && unlockedDoorSprite != null)
         {
-            doorSpriteRenderer.sprite = unlockedDoorSprite; // Cambia el sprite de la puerta
+            doorSpriteRenderer.sprite = unlockedDoorSprite;
         }
     }
 }

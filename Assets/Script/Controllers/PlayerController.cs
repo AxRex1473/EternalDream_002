@@ -4,40 +4,37 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 3f; // Velocidad de movimiento del personaje
-    public SpriteRenderer spriteRenderer; // Referencia al componente SpriteRenderer
+    public float moveSpeed = 3f;
+    public SpriteRenderer spriteRenderer;
     public Animator animator;
     private Rigidbody2D rb;
-    private bool isGrounded;
     public Transform transformPlayer;
     public Transform SpawnPointPlayer;
+    public GameObject panelLose;
+
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Obtener el componente SpriteRenderer del personaje
+        spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        panelLose.SetActive(false); // Asegúrate de que el panel esté desactivado al principio
     }
 
     void Update()
     {
-        // Obtener la entrada del teclado
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        // Calcular el vector de movimiento
         Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
-
-        // Aplicar el movimiento al personaje
         transform.Translate(movement * moveSpeed * Time.deltaTime);
 
-        // Flip del personaje en función de la dirección horizontal
         if (moveHorizontal < 0)
         {
-            spriteRenderer.flipX = false; // Girar el sprite hacia la izquierda
+            spriteRenderer.flipX = false;
         }
         else if (moveHorizontal > 0)
         {
-            spriteRenderer.flipX = true; // Girar el sprite hacia la derecha
+            spriteRenderer.flipX = true;
         }
 
         if (moveHorizontal != 0 || moveVertical != 0)
@@ -49,12 +46,20 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isWalking", false);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verificar si el jugador entró en el collider
-        if (other.CompareTag("Fall"))
+        if (other.CompareTag("Fall") || other.CompareTag("Neuron"))
         {
-            transformPlayer.position = SpawnPointPlayer.transform.position;
+            transformPlayer.position = SpawnPointPlayer.position;
+            StartCoroutine(ActivateAndDeactivatePanel());
         }
+    }
+
+    IEnumerator ActivateAndDeactivatePanel()
+    {
+        panelLose.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        panelLose.SetActive(false);
     }
 }
