@@ -10,14 +10,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public Transform transformPlayer;
     public Transform SpawnPointPlayer;
-    public GameObject panelLose;
 
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        panelLose.SetActive(false); // Asegúrate de que el panel esté desactivado al principio
     }
 
     void Update()
@@ -49,17 +47,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Fall") || other.CompareTag("Neuron"))
+        if (other.CompareTag("Fall"))
         {
             transformPlayer.position = SpawnPointPlayer.position;
-            StartCoroutine(ActivateAndDeactivatePanel());
         }
-    }
-
-    IEnumerator ActivateAndDeactivatePanel()
-    {
-        panelLose.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        panelLose.SetActive(false);
     }
 }
