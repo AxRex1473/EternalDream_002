@@ -1,59 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LiquidRed : MonoBehaviour
 {
-    public Sprite nuevoSprite; // El nuevo sprite para cambiar al hacer clic
-    private SpriteRenderer spriteRenderer; // El SpriteRenderer del objeto
-    private Animator animator; // El Animator del objeto
-    private bool playerInRange = false; // Estado de rango del jugador
+    public Sprite nuevoSprite;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    private bool playerInRange = false;
     public bool isActivate = true;
     public float TimerLiquid = 5;
+    public GameObject click;
 
     public PlayerController player;
+    public TextMeshProUGUI timerColor;
+
+    public int level = 1;
+    private float level1TimerLiquid = 5;
+    private float level2TimerLiquid = 10;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
+        SetupLevel();
+
+        if (timerColor != null)
+        {
+            timerColor.text = "Color: " + TimerLiquid.ToString("F2");
+        }
     }
 
     private void Update()
     {
-        // Verificar si el jugador está en rango y hace clic con el mouse
+        if (level != 2) // Solo activa/desactiva click si no es el nivel 2
+        {
+            if (playerInRange)
+            {
+                click.SetActive(true);
+            }
+            else
+            {
+                click.SetActive(false);
+            }
+        }
+
         if (playerInRange && Input.GetMouseButtonDown(0))
         {
-            // Desactivar el Animator
             animator.enabled = false;
-
-            // Cambiar el sprite manteniendo la configuración de posición y escala
             spriteRenderer.sprite = nuevoSprite;
-
-
             isActivate = false;
-
-            
-            
         }
+
         if (isActivate == false)
         {
             TimerLiquid -= Time.deltaTime;
             player.spriteRenderer.color = Color.red;
+
+            if (timerColor != null)
+            {
+                timerColor.text = "Timer: " + TimerLiquid.ToString("F2");
+            }
+
             if (TimerLiquid <= 0)
             {
                 isActivate = true;
                 animator.enabled = true;
-                TimerLiquid = 5;
+                ResetTimer();
                 player.spriteRenderer.color = Color.white;
 
+                if (timerColor != null)
+                {
+                    timerColor.text = "Timer: " + TimerLiquid.ToString("F2");
+                }
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verificar si el jugador entró en el collider
         if (other.CompareTag("Player_1"))
         {
             playerInRange = true;
@@ -62,10 +89,45 @@ public class LiquidRed : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Verificar si el jugador salió del collider
         if (other.CompareTag("Player_1"))
         {
             playerInRange = false;
+        }
+    }
+
+    // Configurar variables según el nivel actual
+    void SetupLevel()
+    {
+        switch (level)
+        {
+            case 1:
+                TimerLiquid = level1TimerLiquid;
+                break;
+            case 2:
+                TimerLiquid = level2TimerLiquid;
+                click.SetActive(false);
+                break;
+            default:
+                TimerLiquid = level1TimerLiquid;
+                break;
+        }
+    }
+
+    // Restablecer el temporizador según el nivel actual
+    void ResetTimer()
+    {
+        switch (level)
+        {
+            case 1:
+                TimerLiquid = level1TimerLiquid;
+                break;
+            case 2:
+                TimerLiquid = level2TimerLiquid;
+                click.SetActive(false);
+                break;
+            default:
+                TimerLiquid = level1TimerLiquid;
+                break;
         }
     }
 }

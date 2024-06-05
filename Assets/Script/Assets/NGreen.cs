@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NeuronY : MonoBehaviour
+public class NGreen : MonoBehaviour
 {
     private bool playerInRange = false;
 
@@ -23,7 +23,7 @@ public class NeuronY : MonoBehaviour
         if (other.CompareTag("Player_1"))
         {
             playerInRange = true;
-            if (playerInRange && player.spriteRenderer.color != Color.yellow)
+            if (playerInRange && player.spriteRenderer.color != Color.green)
             {
                 player.transform.position = SpawnPoint.position;
             }

@@ -7,11 +7,16 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
     private int points = 0;
-    private int totalPoints = 1; // Total de objetos a recolectar
+    private int totalPoints = 1;
 
-    public GameObject door; // La puerta que se desbloquea
-    public Sprite unlockedDoorSprite; // El nuevo sprite para la puerta desbloqueada
-    public TextMeshProUGUI pointsText; // Referencia al TextMeshPro para mostrar los puntos
+    public GameObject door;
+    public Sprite unlockedDoorSprite;
+    public TextMeshProUGUI pointsText;
+
+    // Variables para configuraciones de niveles
+    public int level = 1;
+    private int level1TotalPoints = 1;
+    private int level2TotalPoints = 4; // Ejemplo para el nivel 2
 
     void Awake()
     {
@@ -27,7 +32,25 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        UpdatePointsText(); // Actualizar el texto al inicio
+        SetupLevel();
+        UpdatePointsText();
+    }
+
+    // Configurar variables según el nivel actual
+    void SetupLevel()
+    {
+        switch (level)
+        {
+            case 1:
+                totalPoints = level1TotalPoints;
+                break;
+            case 2:
+                totalPoints = level2TotalPoints;
+                break;
+            default:
+                totalPoints = level1TotalPoints;
+                break;
+        }
     }
 
     public void AddPoint()
@@ -35,7 +58,7 @@ public class GameController : MonoBehaviour
         points++;
         int pointsRemaining = totalPoints - points;
         Debug.Log("+1 punto. Faltan " + pointsRemaining + " puntos para desbloquear la puerta.");
-        UpdatePointsText(); // Actualizar el texto cada vez que se agrega un punto
+        UpdatePointsText();
         CheckPoints();
     }
 
@@ -43,7 +66,7 @@ public class GameController : MonoBehaviour
     {
         if (pointsText != null)
         {
-            pointsText.text = "Baterias: " + points + "/" + totalPoints;
+            pointsText.text = "Botones: " + points + "/" + totalPoints;
         }
     }
 

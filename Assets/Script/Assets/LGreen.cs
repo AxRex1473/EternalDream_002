@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class Yellow : MonoBehaviour
+public class LGreen : MonoBehaviour
 {
     public Sprite nuevoSprite;
     private SpriteRenderer spriteRenderer;
@@ -18,7 +18,7 @@ public class Yellow : MonoBehaviour
 
     public int level = 1;
     private float level1TimerLiquid = 5;
-    private float level2TimerLiquid = 6;
+    private float level2TimerLiquid = 10;
 
     private void Start()
     {
@@ -57,7 +57,7 @@ public class Yellow : MonoBehaviour
         if (isActivate == false)
         {
             TimerLiquid -= Time.deltaTime;
-            player.spriteRenderer.color = Color.yellow;
+            player.spriteRenderer.color = Color.green;
 
             if (timerColor != null)
             {

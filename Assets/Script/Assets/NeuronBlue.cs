@@ -13,14 +13,11 @@ public class NeuronBlue : MonoBehaviour
     {
         if (playerInRange && player.spriteRenderer.color == Color.white)
         {
-
-
         }
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        // Verificar si el jugador entró en el collider
         if (other.CompareTag("Player_1"))
         {
             playerInRange = true;
@@ -33,7 +30,6 @@ public class NeuronBlue : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Verificar si el jugador salió del collider
         if (other.CompareTag("Player_1"))
         {
             playerInRange = false;

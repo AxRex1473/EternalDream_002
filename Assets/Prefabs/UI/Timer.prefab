@@ -151,3 +151,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 2172175735655490281}
   gameOverPanel: {fileID: 0}
+  startButton: {fileID: 0}
+  level: 2
