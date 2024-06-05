@@ -6,14 +6,12 @@ public class Battery : MonoBehaviour
 { 
     public Sprite nuevoSprite; // El nuevo sprite para cambiar al hacer clic
     private SpriteRenderer spriteRenderer; // El SpriteRenderer del objeto
-    private Animator animator; // El Animator del objeto
     private bool isCollected = false; // Estado de recolección
     private bool playerInRange = false; // Estado de rango del jugador
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -21,9 +19,6 @@ public class Battery : MonoBehaviour
         // Verificar si el jugador está en rango y hace clic con el mouse
         if (playerInRange && Input.GetMouseButtonDown(0) && !isCollected)
         {
-            // Desactivar el Animator
-            animator.enabled = false;
-
             // Cambiar el sprite manteniendo la configuración de posición y escala
             spriteRenderer.sprite = nuevoSprite;
 
