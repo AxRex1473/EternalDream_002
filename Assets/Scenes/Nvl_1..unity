@@ -2049,6 +2049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nuevoSprite: {fileID: -1398528523, guid: 26d62cb011941df4293e4af1fdc9b179, type: 3}
   puerta: {fileID: 0}
+  sprPuerta: {fileID: 0}
 --- !u!1 &941126882
 GameObject:
   m_ObjectHideFlags: 0
@@ -5691,6 +5692,10 @@ PrefabInstance:
     - target: {fileID: 4041957550159442533, guid: 1154cce0dc84ee64982fe52eb3f8384d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961587565012375848, guid: 1154cce0dc84ee64982fe52eb3f8384d, type: 3}
+      propertyPath: level
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4961587565012375848, guid: 1154cce0dc84ee64982fe52eb3f8384d, type: 3}
       propertyPath: startButton

@@ -13,8 +13,9 @@ public class itemClock : MonoBehaviour
         // Verificar si el jugador está en rango y hace clic con el mouse
         if (playerInRange && Input.GetMouseButtonDown(0) && !isCollected)
         {
-            timer.timeRemaining = timer.timeRemaining + 30;
+            timer.timeRemaining = timer.timeRemaining + 15;
             isCollected = true;
+            Destroy(gameObject);
         }
     }
 

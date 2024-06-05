@@ -9,6 +9,7 @@ public class Battery : MonoBehaviour
     private bool isCollected = false; // Estado de recolección
     private bool playerInRange = false; // Estado de rango del jugador
     public BoxCollider2D puerta;
+    public SpriteRenderer sprPuerta;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class Battery : MonoBehaviour
             // Agregar un punto al contador en el GameController
             GameController.instance.AddPoint();
             puerta.isTrigger = true;
+            Destroy(sprPuerta);
         }
     }
 
