@@ -6,39 +6,51 @@ public class PanelController : MonoBehaviour
 {
    
     public GameObject message1;
-    //public GameObject room1;
-    //public GameObject room2;
-    //public GameObject room3;
-
+    public GameObject message2;
+    public GameObject message3;
+    public GameObject message4;
 
     private void Start()
     {
-        //TogglePanel(room1, false); // Desactivar las rooms al iniciar el juego
-        //TogglePanel(room2, false); //
-        //TogglePanel(room3, false); // 
     }
 
     private void TogglePanel(GameObject panel, bool setActive)
     {
-        panel.SetActive(setActive); // Activa o desactiva el panel según el parámetro setActive
+        panel.SetActive(setActive); 
     }
 
     public void ToggleMessagePanel()
     {
         TogglePanel(message1, !message1.activeSelf);
     }
-    //public void ToggleRoom1Panel()
-    //{
-    //    TogglePanel(room1, !room1.activeSelf);// Activa o desactiva el panel de mensaje según su estado actual
 
-    //}
-    //public void ToggleRoom2Panel()
-    //{
-    //    TogglePanel(room2, !room2.activeSelf);// Activa o desactiva el panel de mensaje según su estado actual
-    //}
-    //public void ToggleRoom3Panel()
-    //{
-    //    TogglePanel(room3, !room3.activeSelf);// Activa o desactiva el panel de mensaje según su estado actual
-    //}
+    private void TogglePanel1(GameObject panel, bool setActive)
+    {
+        panel.SetActive(setActive);
+    }
 
+    public void ToggleMessagePanel1()
+    {
+        TogglePanel1(message2, !message2.activeSelf);
+    }
+
+    private void TogglePanel2(GameObject panel, bool setActive)
+    {
+        panel.SetActive(setActive);
+    }
+
+    public void ToggleMessagePanel2()
+    {
+        TogglePanel2(message3, !message3.activeSelf);
+    }
+
+    private void TogglePanel3(GameObject panel, bool setActive)
+    {
+        panel.SetActive(setActive);
+    }
+
+    public void ToggleMessagePanel3()
+    {
+        TogglePanel3(message4, !message4.activeSelf);
+    }
 }

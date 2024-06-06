@@ -5,7 +5,7 @@ using UnityEngine;
 public class Detector : MonoBehaviour
 {
 
-    public GameObject Room;
+    public GameObject panel;
 
     public bool isActive;
 
@@ -26,7 +26,7 @@ public class Detector : MonoBehaviour
         if (collision.CompareTag("Player_1") && isActive == true)
         {
             isActive = false;
-            Room.SetActive(true);
+            panel.SetActive(true);
             Debug.Log("Player entered collider");
         }
     }
