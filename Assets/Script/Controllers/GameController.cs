@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -13,10 +14,9 @@ public class GameController : MonoBehaviour
     public Sprite unlockedDoorSprite;
     public TextMeshProUGUI pointsText;
 
-    // Variables para configuraciones de niveles
     public int level = 1;
     private int level1TotalPoints = 1;
-    private int level2TotalPoints = 4; // Ejemplo para el nivel 2
+    private int level2TotalPoints = 4;
 
     void Awake()
     {
@@ -96,5 +96,10 @@ public class GameController : MonoBehaviour
         {
             doorSpriteRenderer.sprite = unlockedDoorSprite;
         }
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

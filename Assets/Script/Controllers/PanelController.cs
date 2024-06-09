@@ -1,56 +1,84 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PanelController : MonoBehaviour
 {
-   
-    public GameObject message1;
-    public GameObject message2;
-    public GameObject message3;
-    public GameObject message4;
+    public GameObject[] paneles; // Array para almacenar los paneles de la historia
+    public GameObject Neuron;
+    public GameObject Button;
+    public GameObject Door;
+    public GameObject Adapted;
+    public GameObject Exit;
+
+    private int panelActual = 0; // Índice para el panel actual
 
     private void Start()
     {
+        InicializarPaneles();
     }
 
+    // Método para inicializar los paneles (activar el primero y desactivar los demás)
+    private void InicializarPaneles()
+    {
+        for (int i = 0; i < paneles.Length; i++)
+        {
+            paneles[i].SetActive(i == 0);
+        }
+        panelActual = 0;
+    }
+
+    // Método para avanzar al siguiente panel
+    public void SiguientePanel()
+    {
+        Debug.Log("Avanzando al siguiente panel");
+        if (panelActual < paneles.Length - 1)
+        {
+            paneles[panelActual].SetActive(false); // Desactivar el panel actual
+            panelActual++; // Incrementar el índice del panel
+            paneles[panelActual].SetActive(true); // Activar el siguiente panel
+        }
+        else
+        {
+            // Acción específica para el último panel (panelActual == paneles.Length - 1)
+            AccionUltimoPanel();
+        }
+    }
+
+    // Método para la acción específica en el último panel
+    private void AccionUltimoPanel()
+    {
+        // Desactivar el panel actual
+        Debug.Log("Desactivando el último panel");
+        paneles[panelActual].SetActive(false);
+    }
+
+    // Métodos para manejar otros paneles u objetos (Neuron, Button, Puerta)
     private void TogglePanel(GameObject panel, bool setActive)
     {
-        panel.SetActive(setActive); 
-    }
-
-    public void ToggleMessagePanel()
-    {
-        TogglePanel(message1, !message1.activeSelf);
-    }
-
-    private void TogglePanel1(GameObject panel, bool setActive)
-    {
         panel.SetActive(setActive);
     }
 
-    public void ToggleMessagePanel1()
+    public void ToggleNeuronPanel()
     {
-        TogglePanel1(message2, !message2.activeSelf);
+        TogglePanel(Neuron, !Neuron.activeSelf);
     }
 
-    private void TogglePanel2(GameObject panel, bool setActive)
+    public void ToggleButtonPanel()
     {
-        panel.SetActive(setActive);
+        TogglePanel(Button, !Button.activeSelf);
     }
 
-    public void ToggleMessagePanel2()
+    public void TogglePuertaPanel()
     {
-        TogglePanel2(message3, !message3.activeSelf);
+        TogglePanel(Door, !Door.activeSelf);
     }
 
-    private void TogglePanel3(GameObject panel, bool setActive)
+    public void ToggleAdapted()
     {
-        panel.SetActive(setActive);
+        TogglePanel(Adapted, !Adapted.activeSelf);
     }
 
-    public void ToggleMessagePanel3()
+    public void ToggleExit()
     {
-        TogglePanel3(message4, !message4.activeSelf);
+        TogglePanel(Exit, !Exit.activeSelf);
     }
 }

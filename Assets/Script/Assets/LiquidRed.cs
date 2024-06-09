@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LiquidRed : MonoBehaviour
@@ -12,12 +13,15 @@ public class LiquidRed : MonoBehaviour
     public bool isActivate = true;
     public float TimerLiquid = 5;
     public GameObject click;
+    public GameObject panelColor;
 
     public PlayerController player;
     public TextMeshProUGUI timerColor;
+    public GameObject Adapted;
+
 
     public int level = 1;
-    private float level1TimerLiquid = 5;
+    private float level1TimerLiquid = 7;
     private float level2TimerLiquid = 10;
 
     private void Start()
@@ -40,10 +44,12 @@ public class LiquidRed : MonoBehaviour
             if (playerInRange)
             {
                 click.SetActive(true);
+                panelColor.SetActive(true);
             }
             else
             {
                 click.SetActive(false);
+                panelColor.SetActive(false);
             }
         }
 
@@ -52,12 +58,15 @@ public class LiquidRed : MonoBehaviour
             animator.enabled = false;
             spriteRenderer.sprite = nuevoSprite;
             isActivate = false;
+            Adapted.SetActive(true);
+
         }
 
         if (isActivate == false)
         {
             TimerLiquid -= Time.deltaTime;
             player.spriteRenderer.color = Color.red;
+
 
             if (timerColor != null)
             {
@@ -76,6 +85,7 @@ public class LiquidRed : MonoBehaviour
                     timerColor.text = "Timer: " + TimerLiquid.ToString("F2");
                 }
             }
+
         }
     }
 
@@ -129,5 +139,15 @@ public class LiquidRed : MonoBehaviour
                 TimerLiquid = level1TimerLiquid;
                 break;
         }
+    }
+
+    private void TogglePanel(GameObject panel, bool setActive)
+    {
+        panel.SetActive(setActive);
+    }
+
+    public void ToggleAdapted()
+    {
+        TogglePanel(Adapted, !Adapted.activeSelf);
     }
 }

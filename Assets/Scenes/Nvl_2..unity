@@ -1107,9 +1107,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.010046244, a: 1}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1625440912, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1153,9 +1153,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.24, y: 0.37}
     newSize: {x: 0.22, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3878a44ae71a6b48a282420410925b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nuevoSprite: {fileID: -1573216356, guid: 26d62cb011941df4293e4af1fdc9b179, type: 3}
+  nuevoSprite: {fileID: 131397590, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
   puerta: {fileID: 1552128750}
   sprPuerta: {fileID: 1552128751}
   detector: {fileID: 527957459}
@@ -2144,9 +2144,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0.0184803, b: 1, a: 1}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1625440912, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2190,9 +2190,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.24, y: 0.37}
     newSize: {x: 0.22, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2213,7 +2213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3878a44ae71a6b48a282420410925b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nuevoSprite: {fileID: -1573216356, guid: 26d62cb011941df4293e4af1fdc9b179, type: 3}
+  nuevoSprite: {fileID: 131397590, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
   puerta: {fileID: 1653293678}
   sprPuerta: {fileID: 1653293679}
   detector: {fileID: 527957459}
@@ -3823,9 +3823,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.9009238, g: 0.21226418, b: 1, a: 1}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1625440912, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3869,9 +3869,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.24, y: 0.37}
     newSize: {x: 0.22, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3892,7 +3892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3878a44ae71a6b48a282420410925b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nuevoSprite: {fileID: -1573216356, guid: 26d62cb011941df4293e4af1fdc9b179, type: 3}
+  nuevoSprite: {fileID: 131397590, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
   puerta: {fileID: 1291556937}
   sprPuerta: {fileID: 1291556938}
   detector: {fileID: 527957459}
@@ -4917,7 +4917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140009866109067993, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 955.983
+      value: 401.1951
       objectReference: {fileID: 0}
     - target: {fileID: 1140009866109067993, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4925,7 +4925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140009866109067993, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -4.7039
+      value: -282.0978
       objectReference: {fileID: 0}
     - target: {fileID: 1141514631904157583, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4937,28 +4937,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1141514631904157583, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12.255
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 1141514631904157583, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 116
+      value: 187
       objectReference: {fileID: 0}
     - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_text
-      value: "Nvl.2\n\nBusca los diferentes botones para acercarte a la zona central
-        y completar tu misi\xF3n.\nSigue Usando Tu poder de Adaptaci\xF3n\n"
+      value: 'Muy bien Morphy, continua usando tu poder de adaptacion para  abrirte
+        paso a la siguiente zona...
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_margin.y
+      value: 252.17627
       objectReference: {fileID: 0}
     - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_fontSizeBase
-      value: 70
+      value: 55
       objectReference: {fileID: 0}
-    - target: {fileID: 3412117934576335293, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
-      propertyPath: m_fontSize
-      value: 60
+    - target: {fileID: 1734849739849706127, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3412117934576335293, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_fontSizeBase
@@ -4974,7 +4980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7283572853050531194, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.6666667
       objectReference: {fileID: 0}
     - target: {fileID: 7665774949361562104, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_IsActive
@@ -5062,19 +5068,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8809473869165460442, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 507.8175
+      value: 388.6069
       objectReference: {fileID: 0}
     - target: {fileID: 8809473869165460442, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 238.8013
+      value: 174.611
       objectReference: {fileID: 0}
     - target: {fileID: 8809473869165460442, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 40.126305
+      value: 519
       objectReference: {fileID: 0}
     - target: {fileID: 8809473869165460442, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -243
+      value: -81
       objectReference: {fileID: 0}
     - target: {fileID: 9211628023518884846, guid: ef28db8b22af31e4c99f40db43809b31, type: 3}
       propertyPath: m_IsActive
@@ -9480,9 +9486,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0.94832873, b: 0, a: 1}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1625440912, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9526,9 +9532,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
+    oldSize: {x: 0.24, y: 0.37}
     newSize: {x: 0.22, y: 0.37}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9549,7 +9555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3878a44ae71a6b48a282420410925b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nuevoSprite: {fileID: -1573216356, guid: 26d62cb011941df4293e4af1fdc9b179, type: 3}
+  nuevoSprite: {fileID: 131397590, guid: a8d932c6538d63848b74852c779dfe69, type: 3}
   puerta: {fileID: 288589092}
   sprPuerta: {fileID: 288589093}
   detector: {fileID: 527957459}
