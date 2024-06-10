@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class PanelController : MonoBehaviour
 {
-    public GameObject[] paneles; // Array para almacenar los paneles de la historia
+    public GameObject[] paneles; 
     public GameObject Neuron;
     public GameObject Button;
     public GameObject Door;
     public GameObject Adapted;
     public GameObject Exit;
+    public GameObject MsgN2;
 
-    private int panelActual = 0; // Índice para el panel actual
+    private int panelActual = 0; 
 
     private void Start()
     {
         InicializarPaneles();
     }
 
-    // Método para inicializar los paneles (activar el primero y desactivar los demás)
     private void InicializarPaneles()
     {
         for (int i = 0; i < paneles.Length; i++)
@@ -26,24 +26,21 @@ public class PanelController : MonoBehaviour
         panelActual = 0;
     }
 
-    // Método para avanzar al siguiente panel
     public void SiguientePanel()
     {
         Debug.Log("Avanzando al siguiente panel");
         if (panelActual < paneles.Length - 1)
         {
-            paneles[panelActual].SetActive(false); // Desactivar el panel actual
-            panelActual++; // Incrementar el índice del panel
-            paneles[panelActual].SetActive(true); // Activar el siguiente panel
+            paneles[panelActual].SetActive(false); 
+            panelActual++; 
+            paneles[panelActual].SetActive(true); 
         }
         else
         {
-            // Acción específica para el último panel (panelActual == paneles.Length - 1)
             AccionUltimoPanel();
         }
     }
 
-    // Método para la acción específica en el último panel
     private void AccionUltimoPanel()
     {
         // Desactivar el panel actual
@@ -51,7 +48,6 @@ public class PanelController : MonoBehaviour
         paneles[panelActual].SetActive(false);
     }
 
-    // Métodos para manejar otros paneles u objetos (Neuron, Button, Puerta)
     private void TogglePanel(GameObject panel, bool setActive)
     {
         panel.SetActive(setActive);
@@ -80,5 +76,10 @@ public class PanelController : MonoBehaviour
     public void ToggleExit()
     {
         TogglePanel(Exit, !Exit.activeSelf);
+    }
+
+    public void ToggleMsg2()
+    {
+        TogglePanel(MsgN2, !MsgN2.activeSelf);
     }
 }
