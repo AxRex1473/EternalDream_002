@@ -11,10 +11,12 @@ public class Battery : MonoBehaviour
     public BoxCollider2D puerta;
     public SpriteRenderer sprPuerta;
     public Detector detector;
+    public GameObject panelButton;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        panelButton.SetActive(false);
     }
 
     private void Update()
@@ -24,6 +26,7 @@ public class Battery : MonoBehaviour
         {
             // Cambiar el sprite manteniendo la configuración de posición y escala
             spriteRenderer.sprite = nuevoSprite;
+            panelButton.SetActive(true);
 
             // Marcar el objeto como recogido
             isCollected = true;

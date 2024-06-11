@@ -21,6 +21,7 @@ public class CountdownTimer : MonoBehaviour
         gameOverPanel.SetActive(false);
         SetupLevel();
         UpdateTimerDisplay();
+        Time.timeScale = 1f;
     }
 
     void Update()

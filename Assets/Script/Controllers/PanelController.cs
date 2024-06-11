@@ -9,8 +9,10 @@ public class PanelController : MonoBehaviour
     public GameObject Adapted;
     public GameObject Exit;
     public GameObject MsgN2;
+    public GameObject doorGreen;
+    public GameObject buttonN2;
 
-    private int panelActual = 0; 
+    public int panelActual = 0; 
 
     private void Start()
     {
@@ -81,5 +83,15 @@ public class PanelController : MonoBehaviour
     public void ToggleMsg2()
     {
         TogglePanel(MsgN2, !MsgN2.activeSelf);
+    }
+
+    public void ToggleDoorG()
+    {
+        TogglePanel(doorGreen, !doorGreen.activeSelf);
+    }
+    
+    public void ToggleButton2()
+    {
+        TogglePanel(buttonN2, !buttonN2.activeSelf);
     }
 }
